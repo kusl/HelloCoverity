@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace CoverityConsole
 {
@@ -6,7 +6,7 @@ namespace CoverityConsole
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            WriteLine("Hello World!");
         }
     }
 }
