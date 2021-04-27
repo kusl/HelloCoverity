@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CoverityConsole
 {
-    public class Calculator
+    public static class Calculator
     {
         public static int AddTwoNumbers(int first, int second)
         {
