@@ -7,7 +7,7 @@ namespace CoverityConsole
     {
         static void Main(string[] args)
         {
-            Serilog.Log.Logger = new Serilog.LoggerConfiguration()
+            Log.Logger = new LoggerConfiguration()
                 .MinimumLevel.Debug()
                 .WriteTo.Console(restrictedToMinimumLevel: Serilog.Events.LogEventLevel.Debug) // restricted... is Option
                 .CreateLogger();
