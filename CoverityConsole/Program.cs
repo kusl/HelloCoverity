@@ -1,5 +1,4 @@
 ﻿using Serilog;
-using static System.Console;
 
 namespace CoverityConsole
 {
@@ -11,9 +10,13 @@ namespace CoverityConsole
                 .MinimumLevel.Debug()
                 .WriteTo.Console(restrictedToMinimumLevel: Serilog.Events.LogEventLevel.Debug) // restricted... is Option
                 .CreateLogger();
-            for (int i = 0; i < int.MaxValue; i++)
+            Log.Debug("hello, world!");
+            if (args.Length > 0)
             {
-                Log.Information($"The current step is {i}");
+                foreach (var arg in args)
+                {
+                    Log.Debug($"argument is {arg}");
+                }
             }
         }
     }
